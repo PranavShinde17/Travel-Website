@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <title>Login Page</title>
+    <style>
+      body {
+        background: url("./assets/images/image8.jpg") no-repeat center center;
+        font-family: Arial, sans-serif;
+        background-color: #f0f2f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+        .container {
+        display: flex;
+       /* background-color: #fff;*/
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+        overflow: hidden;
+        max-width: 800px;
+        width: 30%;
+      } 
+
+      /*.left-section,*/
+      .right-section {
+        width: 100%;
+        position: relative;
+      }
+
+      .right-section {
+        padding: 2em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .right-section h2 {
+        margin-bottom: 1em;
+        color: #333;
+      }
+
+      .form-group {
+        margin-bottom: 1.5em;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 0.5em;
+        color: #555;
+      }
+
+      .form-group input {
+        width: 100%;
+        padding: 0.75em;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      .form-group input:focus {
+        border-color: #0b9366;
+        outline: none;
+      }
+
+      .signup-btn {
+        width: 40%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.75em;
+        border: none;
+        border-radius: 30px;
+        background-color: hsl(249, 95%, 63%);
+        color: #fff;
+        font-size: 1em;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .signup-btn:hover {
+        background-color: hsl(249, 74%, 31%);
+      }
+      .border {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        border-radius: 8px;
+        }
+
+    </style>
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <span class="border border-secondary">
+      <!-- <div class="left-section">
+        <h3 style="margin-top: 130px;">Don't have an account ?</h3>
+         <button class="sign-in-btn" onclick="location.href='signup.html'">
+          Sign Up
+        </button>
+      </div> -->
+      <div class="right-section">
+        <h2>Please Login</h2>
+        <form action="login.html" method="post">
+          <div class="form-group">
+            <!-- <label for="username" style="color: rgb(15, 15, 15);">Username</label>
+            <input type="text" id="username" name="Username" required /> -->
+            <label for="Name" class="form-label" style="color: rgb(0, 0, 0);">Username</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Username">
+          </div>
+          <div class="form-group">
+            <!-- <label for="password" style="color: rgb(15, 15, 15);">Password</label>
+            <input type="password" id="password" name="Password" required /> -->
+            <label for="inputPassword5" class="form-label" style="color: rgb(0, 0, 0);">Password</label>
+          <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+          </div>
+          <button type="submit" class="signup-btn">Login</button>
+          <h3 style="margin-top: 25px; font-size: 20px;">Don't have an account ?
+            <a href="signup.html" class="" style="color: rgb(65, 9, 9);">Signup</a>
+          </h3>
+        </form>
+      </div>
+    </span>
+    
+  </body>
+</html>

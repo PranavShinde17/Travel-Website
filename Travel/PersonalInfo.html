@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Styled Form</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background: url("image3.jpg");
+        background-size: 100vw 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .form-container {
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 650px;
+        height: 750px;
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      .form-group {
+        margin-bottom: 25px;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 10px;
+        color: #555;
+      }
+
+      .form-group input[type="text"],
+      .form-group input[type="password"],
+      .form-group select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+      }
+
+      .radio-group,
+      .checkbox-group {
+        display: flex;
+        align-items: center;
+      }
+
+      .radio-group label,
+      .checkbox-group label {
+        margin-left: 10px;
+        color: #555;
+      }
+
+      .form-buttons {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .btn {
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn-login {
+        background-color: #2579ff;
+        color: white;
+      }
+
+      .btn-login:hover {
+        background-color: #f72b2b;
+      }
+
+      .btn-reset {
+        background-color: #2579ff;
+        color: white;
+      }
+
+      .btn-reset:hover {
+        background-color: #fe2e2e;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <form action="show.jsp" method="post">
+        <h2>Personal Details</h2>
+
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required />
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+
+        <div class="form-group">
+          <label for="city">City of Employment</label>
+          <input type="text" id="city" name="city" required />
+        </div>
+
+        <div class="form-group">
+          <label for="server">Server Type</label>
+          <select id="server" name="server">
+            <option value="development">Development</option>
+            <option value="staging">Staging</option>
+            <option value="production">Production</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Please specify your role:</label>
+          <div class="radio-group">
+            <input type="radio" id="admin" name="role" value="admin" />
+            <label for="admin">Admin</label>
+          </div>
+          <div class="radio-group">
+            <input type="radio" id="user" name="role" value="user" />
+            <label for="user">Engineer</label>
+          </div>
+          <div class="radio-group">
+            <input type="radio" id="guest" name="role" value="guest" />
+            <label for="guest">Manager</label>
+          </div>
+          <div class="radio-group">
+            <input type="radio" id="other" name="role" value="other" />
+            <label for="other">Guest</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Single sign-on to the following:</label>
+          <div class="checkbox-group">
+            <input type="checkbox" id="mail" name="sso1" value="mail"/>
+            <label for="mail">Mail</label>
+          </div>
+          <div class="checkbox-group">
+            <input type="checkbox" id="payroll" name="sso2" value="payroll"/>
+            <label for="payroll">Pyroll</label>
+          </div>
+          <div class="checkbox-group">
+            <input type="checkbox" id="selfservice" name="sso3" value="selfservice"/>
+            <label for="selfservice">Self Service </label>
+          </div>
+        </div>
+
+        <div class="form-buttons">
+          <button type="submit" class="btn btn-login">Login</button>
+          <button type="reset" class="btn btn-reset">Reset</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
